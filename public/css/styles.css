@@ -35,11 +35,17 @@ h1,h2,h3,h4,h5,p{
   font-family: 'Merriweather', serif;
 }
 
+h1{
+  text-shadow: 3px 3px #b4b4b4
+}
+
+
 h5{
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   letter-spacing: 2.5px;
   -webkit-text-transform: uppercase;
   text-transform: uppercase;
+  text-shadow: 2px 2px #a3a3a3
 }
 
 h6{
@@ -137,7 +143,7 @@ nav a span {
   height: 100%;
   min-height: 100%;
   padding: 20px;
-  background: #000;
+  background: rgb (201, 159, 159);
 }
 
 .sidebar-info-box {
@@ -167,7 +173,7 @@ nav a span {
   text-rendering: optimizeLegibility;
   line-height: 1.6;
   font-size: 14px;
-  color: #999
+  color: rgb (89, 79, 79)
 }
 
 .sidebar a {
@@ -262,6 +268,10 @@ nav a span {
   box-shadow: 0 0 0 1px rgba(10, 10, 10, 0.2);
 }
 
+.cell img:hover {
+  transition-timing-function: ease-in;
+  width: 105%;
+}
 
 /* 
   About and project pages styles 

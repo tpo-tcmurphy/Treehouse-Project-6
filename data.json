@@ -1,49 +1,54 @@
 {
     "projects": [
       {
-        "id": 1,
+        "id": "0",
         "project_name": "A Random Quote Generator",
         "description": "A program that displays a randomly selected quote each time the user clicks a button.",
         "technologies": ["JavaScript", "HTML"],
         "live_link": "https://tpo-tcmurphy.github.io/TreeHouse-Project-1/",
         "github_link": "https://github.com/tpo-tcmurphy/TreeHouse-Project-1",
-        "image_urls": ["/static/images/thumbnail-project-1.png", "/static/images/screenshot-project-1.png"]
+        "thumbnail_pic": "/static/images/thumbnail-project-1.png", 
+        "image_urls": ["/static/images/screenshot-project-1.png"]
       },
       {
-        "id": 2,
+        "id": "1",
         "project_name": "Data Pagination and Filtering",
         "description": "Filter and paginate a large list of students for better usability.",
         "technologies": ["JavaScript", "HTML"],
         "live_link": "https://tpo-tcmurphy.github.io/Treehouse-Project-2-Data-Pagination-and-Filtering/",
         "github_link": "https://github.com/tpo-tcmurphy/Treehouse-Project-2-Data-Pagination-and-Filtering",
-        "image_urls": ["/static/images/thumbnail-project-2.png", "/static/images/screenshot-project-2.png"]
+        "thumbnail_pic": "/static/images/thumbnail-project-2.png",
+        "image_urls": ["/static/images/screenshot-project-2.png"]
       },
       {
-        "id": 3,
+        "id": "2",
         "project_name": "Interactive Form",
         "description": "A form used to sign up for a full stack conference and individual activites.",
         "technologies": ["JavaScript", "HTML", "CSS"],
         "live_link": "https://tpo-tcmurphy.github.io/Project-3-Interactive-Form/",
         "github_link": "https://github.com/tpo-tcmurphy/Project-3-Interactive-Form",
-        "image_urls": ["/static/images/thumbnail-project-3.png", "/static/images/screenshot-project-3.png"]
+        "thumbnail_pic": "/static/images/thumbnail-project-3.png",
+        "image_urls": ["/static/images/screenshot-project-3.png"]
       },
       {
-        "id": 4,
+        "id": "3",
         "project_name": "Phrase Hunter",
         "description": "A browser based word guessing game.",
         "technologies": ["JavaScript", "HTML", "CSS"],
         "live_link": " https://tpo-tcmurphy.github.io/Treehouse-Project-4-/",
         "github_link": "https://github.com/tpo-tcmurphy/Treehouse-Project-4-",
-        "image_urls": ["/static/images/thumbnail-project-4.png", "/static/images/screenshot-project-4.png"]
+        "thumbnail_pic": "/static/images/thumbnail-project-4.png",
+        "image_urls": ["/static/images/screenshot-project-4.png"]
       },
       {
-        "id": 5,
+        "id": "4",
         "project_name": "Awesome Startup Contact Sharing App",
         "description": "An app that pulls 12 random employees via an API request and displays them on the page.",
         "technologies": ["JavaScript", "HTML", "CSS", "AJAX"],
         "live_link": "https://tpo-tcmurphy.github.io/Treehouse-Project-5/",
         "github_link": "https://github.com/tpo-tcmurphy/Treehouse-Project-5",
-        "image_urls": ["/static/images/thumbnail-project-5.png", "/static/images/screenshot-project-5.png"]
+        "thumbnail_pic": "/static/images/thumbnail-project-5.png",
+        "image_urls": ["/static/images/screenshot-project-5.png"]
       }
     ]
   }
