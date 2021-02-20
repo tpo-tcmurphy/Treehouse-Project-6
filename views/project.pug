@@ -11,22 +11,22 @@ block content
     .inner-wrapper.flex-row-wrap.two-col
       .project-info-box.box
 
-        h1= project_name
+        h1 #{project_name}
 
-        p= description
+        p  #{description}
 
       .project-tech-links-box.box
         h6 Technologies
         ul
-          each technology in project.technologies
+        each technology in technologies
             li= technology
 
-        a.btn-link(href= live_link) Live Demo
-        a.btn-link(href= github_link) GitHub Repo
+        a.btn-link(href=live_link target) Live Demo
+        a.btn-link(href=github_link) GitHub Repo
 
     .project-img-box.box
-       each image in image_urls 
-        img.project-img(src=image, alt=`Preview image for ${project_name}`)
+      
+      img.project-img(src=`${image_urls}`, alt = 'picture of project')
 
 
     nav.nav

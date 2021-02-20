@@ -1,7 +1,7 @@
 {
     "projects": [
       {
-        "id": "0",
+        "id": 1,
         "project_name": "A Random Quote Generator",
         "description": "A program that displays a randomly selected quote each time the user clicks a button.",
         "technologies": ["JavaScript", "HTML"],
@@ -11,7 +11,7 @@
         "image_urls": ["/static/images/screenshot-project-1.png"]
       },
       {
-        "id": "1",
+        "id": 2,
         "project_name": "Data Pagination and Filtering",
         "description": "Filter and paginate a large list of students for better usability.",
         "technologies": ["JavaScript", "HTML"],
@@ -21,7 +21,7 @@
         "image_urls": ["/static/images/screenshot-project-2.png"]
       },
       {
-        "id": "2",
+        "id": 3,
         "project_name": "Interactive Form",
         "description": "A form used to sign up for a full stack conference and individual activites.",
         "technologies": ["JavaScript", "HTML", "CSS"],
@@ -31,7 +31,7 @@
         "image_urls": ["/static/images/screenshot-project-3.png"]
       },
       {
-        "id": "3",
+        "id": 4,
         "project_name": "Phrase Hunter",
         "description": "A browser based word guessing game.",
         "technologies": ["JavaScript", "HTML", "CSS"],
@@ -41,7 +41,7 @@
         "image_urls": ["/static/images/screenshot-project-4.png"]
       },
       {
-        "id": "4",
+        "id": 5,
         "project_name": "Awesome Startup Contact Sharing App",
         "description": "An app that pulls 12 random employees via an API request and displays them on the page.",
         "technologies": ["JavaScript", "HTML", "CSS", "AJAX"],

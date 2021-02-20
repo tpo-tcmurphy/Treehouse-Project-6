@@ -1,38 +1,56 @@
 const express = require('express')
-
 const app = express()
+const port = 3000
 
-app.set('view engine', 'pug')
+const projectData = require('./data.json')
 
-const mainRoutes = require('./routes')
-const projectRoutes = require('./routes/projects')
-
-app.use(mainRoutes)
-app.use('/projects', projectRoutes)
-
+// set the static route
 app.use('/static', express.static('public'))
 
+// set the view engine to pug
+app.set('view engine', 'pug')
+
+// root route
+app.get('/', (req, res) => {
+  res.render('index', projectData)
+})
+
+// about route
+app.get('/about', (req, res) => {
+  res.render('about', projectData)
+})
+
+// project route with error handler
+app.get('/project/:id', (req, res) => {
+  const projectIndex = parseInt(req.params.id) - 1
+  res.render('project', projectData.projects[projectIndex], (err, html) => {
+    if (err) {
+      console.log('Something went wrong, please go back.')
+      res.render('error', {
+        err: {
+          message: 'Something went wrong, please go back.',
+          status: 500
+        }
+      })
+    } else {
+      res.send(html)
+    }
+  })
+})
+
+// 404 route handler
 app.use((req, res, next) => {
-  const err = new Error('Page Not Found')
-  err.status = 404
-  next(err)
+  console.log('Sorry, page not found. Please go back. ')
+  res.render('page-not-found', {
+    err:
+    {
+      message: 'That page does not exist, please go back.',
+      status: 404
+    }
+  })
 })
 
-app.use((err, req, res, next) => {
-  if (err.status === 404) {
-    res.locals.error = err
-    res.render('page-not-found')
-  } else if (err.status === undefined) {
-    err.status = 500
-    err.message = 'Something went wrong!'
-    res.locals.error = err
-    res.render('error')
-  } else {
-    res.locals.error = err
-    res.render('error')
-  }
-})
-
-app.listen(3000, () => {
-  console.log('The application is running on localhost:3000')
+// listens to localhost:3000
+app.listen(port, () => {
+  console.log(`Listening at http://localhost:${port}...`)
 })
