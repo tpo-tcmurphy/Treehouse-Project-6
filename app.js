@@ -1,11 +1,23 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const projects = require('./data.json')
 
+// Set static route and view engine to pug
+app.use('/static', express.static('public'))
+app.set('view engine', 'pug')
+
+// Route Handlers
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.render('index', projects)
 })
 
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+app.get('/about', (req, res) => {
+  res.render('about')
 })
+app.get('/project/:id', (req, res, next) => {
+  const projectIndex = global.parseInt(req.params.id) - 1
+  res.render('project', projects.projects[projectIndex])
+})
+
+// App listener
+app.listen(3000, console.log('App is listening to port 3000'))
