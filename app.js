@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-const projectData = require('./data.json')
+const data = require('./data.json')
 
 // set the static route
 app.use('/static', express.static('public'))
@@ -12,18 +12,17 @@ app.set('view engine', 'pug')
 
 // root route
 app.get('/', (req, res) => {
-  res.render('index', projectData)
+  res.render('index', data)
 })
 
 // about route
 app.get('/about', (req, res) => {
-  res.render('about', projectData)
+  res.render('about', data)
 })
-
 // project route with error handler
 app.get('/project/:id', (req, res) => {
   const projectIndex = parseInt(req.params.id) - 1
-  res.render('project', projectData.projects[projectIndex], (err, html) => {
+  res.render('project', data.projects[projectIndex], (err, html) => {
     if (err) {
       console.log('Something went wrong, please go back.')
       res.render('error', {
