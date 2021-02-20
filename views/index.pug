@@ -5,10 +5,10 @@ block content
   article.portfolio-intro
 
     //- Replace with your own heading like 'My Portfolio', or 'Hey, Potential Employers', or 'Let's make the web great together!' 
-    h1 My completed work as a student of Treehouse
+    h1 My Projects
 
     //- Replace with a description for your portfolio, what this project is, it's purpose, what it's supposed to accomplish, etc. 
-    p This is my current portfolio of projects that I have completed thus far with Treehouse. 
+    p This is my current portfolio of projects that I have completed thus far. 
 
 
   article.portfolio-project-thumbs
@@ -16,5 +16,5 @@ block content
        each project in projects
         .cell
            a(href=`/projects/${project.id}`)
-            img(src=`${project.image_urls[0]}`)
-            h5 = project.project_name
+            img(src=`${project.image_urls[1]}`)
+            h5 #{project.project_name}
